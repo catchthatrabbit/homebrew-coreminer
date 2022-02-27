@@ -1,6 +1,6 @@
 require_relative "lib/custom_download_strategy"
 
-class Gocore< Formula
+class Coreminer< Formula
   desc "Official Coreminer implementation"
   homepage "https://coreblockchain.cc/"
   url "https://github.com/catchthatrabbit/coreminer/v0.19.29.tar.gz", :using => CustomGitHubPrivateRepositoryDownloadStrategy
