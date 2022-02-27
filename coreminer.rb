@@ -12,9 +12,9 @@ class Coreminer< Formula
   depends_on "git"
 
   def install
+    system "git", "submodule", "update", "--init", "--recursive"
     system "mkdir", "build"
     Dir.chdir('build') do
-        system "git", "submodule", "update", "--init", "--recursive"
         system "cmake", ".."
         system "make", "all"
         bin.install Dir["build/bin/coreminer"]
