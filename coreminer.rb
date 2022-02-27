@@ -11,9 +11,9 @@ class Coreminer< Formula
   depends_on "cmake" => :build
 
   def install
-    system "mkdir", "build"
-    system "cd", "build"
-    system "cmake", ".."
+    system "mkdir build"
+    system "cd build"
+    system "cmake .."
     system "make", "all"
     bin.install Dir["build/bin/coreminer"]
   end
