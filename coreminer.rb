@@ -10,6 +10,7 @@ class Coreminer< Formula
 
   depends_on "cmake"
   depends_on "git"
+  depends_on "make"
 
   def install
     system "mkdir", "build"
