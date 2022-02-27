@@ -8,11 +8,13 @@ class Coreminer< Formula
   sha256 "72beea23bf7f594eb4e4661ee34bb5c192ac13d4117fac4d92fddd02cce2b572"
   license "LGPL-3.0"
 
-  depends_on "cmake" => :build
+  depends_on "cmake"
+  depends_on "git"
 
   def install
     system "mkdir", "build"
     Dir.chdir('build') do
+        system "git", "submodule", "update", "--init", "--recursive"
         system "cmake", ".."
         system "make", "all"
         bin.install Dir["build/bin/coreminer"]
