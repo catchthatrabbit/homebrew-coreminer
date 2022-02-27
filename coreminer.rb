@@ -12,7 +12,7 @@ class Coreminer< Formula
 
   def install
     system "mkdir", "build"
-    Dir.chdir('#{buildpath}/build')
+    Dir.chdir('build')
     system "cmake", ".."
     system "make", "all"
     bin.install Dir["build/bin/coreminer"]
