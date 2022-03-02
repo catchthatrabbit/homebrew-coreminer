@@ -17,7 +17,7 @@ class Coreminer< Formula
     Dir.chdir('build') do
         system "cmake", ".."
         system "make", "all"
-        bin.install Dir["build/bin/ethminer"]
+        bin.install Dir["build/ethminer/ethminer"]
     end
   end
 end
