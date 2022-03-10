@@ -5,11 +5,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world!
       - name: Run a multi-line script
         run: |
-          brew tap catchthatrabbit/coreminer
-          brew install --HEAD catchthatrabbit/coreminer/coreminer
           brew tap core-coin/ylem
           brew install --HEAD core-coin/ylem/ylem
